@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible semantic HTML5 component architecture demo.">
+  <title>Accessible Components | Rabtech Task 3</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">RA</span><span>Accessible Components</span></div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Overview</a></li>
+        <li><a href="components/forms.html">Forms</a></li>
+        <li><a href="components/table.html">Data table</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="Section navigation">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#features">Components</a></li>
+        <li><a href="#dialog-section">Modal dialog</a></li>
+      </ul>
+    </aside>
+    <main id="main-content" tabindex="-1">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">RABTECH ACADEMY · TASK 3</p>
+        <h1 id="page-title">Semantic HTML5 &amp; Accessible Component Architecture</h1>
+        <p> A responsive, keyboard-friendly demonstration of semantic structure, accessible forms, tables, and modal dialogs.</p>
+        <a class="button-link" href="components/forms.html">Explore form components</a>
+      </section>
+      <section id="principles" aria-labelledby="principles-title">
+        <h2 id="principles-title">Accessibility principles</h2>
+        <div class="card-grid">
+          <article class="info-card"><h3>Semantic structure</h3><p>Landmarks and meaningful headings help assistive technology users navigate the page.</p></article>
+          <article class="info-card"><h3>Keyboard support</h3><p>Visible focus indicators and keyboard-operable controls support users who do not use a mouse.</p></article>
+          <article class="info-card"><h3>Clear feedback</h3><p>Forms provide explicit labels, required-field information, and readable validation messages.</p></article>
+        </div>
+      </section>
+      <section id="features" aria-labelledby="features-title">
+        <h2 id="features-title">Component directory</h2>
+        <ul class="feature-list">
+          <li><a href="components/forms.html">Accessible form controls</a> — labels, fieldsets, help text, and validation.</li>
+          <li><a href="components/table.html">Accessible data table</a> — caption, header groups, and scoped headings.</li>
+          <li><a href="#dialog-section">Modal dialog</a> — labelled dialog, close action, and Escape-key support.</li>
+        </ul>
+      </section>
+      <section id="dialog-section" aria-labelledby="dialog-title">
+        <h2 id="dialog-title">Modal dialog example</h2>
+        <p>Open the dialog to view a short accessibility note.</p>
+        <button class="button" id="open-dialog" type="button">Open accessibility note</button>
+        <dialog id="accessibility-dialog" aria-labelledby="dialog-heading" aria-describedby="dialog-description">
+          <div class="dialog-content">
+            <h2 id="dialog-heading">Accessibility note</h2>
+            <p id="dialog-description">A useful dialog has a clear title, can be closed, and returns focus to the control that opened it.</p>
+            <button class="button" id="close-dialog" type="button">Close dialog</button>
+          </div>
+        </dialog>
+      </section>
+    </main>
+  </div>
+  <footer class="site-footer"><p>Rabtech Academy · Task 3 · Semantic HTML5 and accessible components</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

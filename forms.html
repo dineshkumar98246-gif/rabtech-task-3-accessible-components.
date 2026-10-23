@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible form controls demo.">
+  <title>Accessible Forms | Rabtech Task 3</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">RA</span><span>Accessible Components</span></div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" aria-label="Primary navigation"><ul>
+      <li><a href="../index.html">Overview</a></li><li><a href="forms.html" aria-current="page">Forms</a></li><li><a href="table.html">Data table</a></li>
+    </ul></nav>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="Section navigation"><h2>Forms</h2><ul><li><a href="#contact-form">Contact form</a></li><li><a href="../index.html">Back to overview</a></li></ul></aside>
+    <main id="main-content" tabindex="-1">
+      <p class="eyebrow">COMPONENT DEMO</p>
+      <h1>Accessible form controls</h1>
+      <p>Every input has a visible label. Required fields are marked in text, and feedback is announced through a live region.</p>
+      <section id="contact-form" aria-labelledby="form-title">
+        <h2 id="form-title">Contact form</h2>
+        <form id="contact-form-element" novalidate>
+          <div class="form-field">
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input id="full-name" name="fullName" autocomplete="name" required aria-describedby="name-help">
+            <p id="name-help" class="help-text">Enter your first and last name.</p>
+          </div>
+          <div class="form-field">
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help">
+            <p id="email-help" class="help-text">Use a valid email address, for example name@example.com.</p>
+          </div>
+          <fieldset>
+            <legend>Preferred contact method <span class="optional">(choose one)</span></legend>
+            <label class="choice"><input type="radio" name="contactMethod" value="email" checked> Email</label>
+            <label class="choice"><input type="radio" name="contactMethod" value="phone"> Phone</label>
+          </fieldset>
+          <div class="form-field">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-help"></textarea>
+            <p id="message-help" class="help-text">Write a short message (at least 10 characters).</p>
+          </div>
+          <button class="button" type="submit">Validate form</button>
+          <p id="form-status" class="status-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer class="site-footer"><p>Rabtech Academy · Task 3</p></footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

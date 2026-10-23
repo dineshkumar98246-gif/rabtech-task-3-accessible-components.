@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible data table demo.">
+  <title>Accessible Data Table | Rabtech Task 3</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">RA</span><span>Accessible Components</span></div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" aria-label="Primary navigation"><ul>
+      <li><a href="../index.html">Overview</a></li><li><a href="forms.html">Forms</a></li><li><a href="table.html" aria-current="page">Data table</a></li>
+    </ul></nav>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="Section navigation"><h2>Data</h2><ul><li><a href="#project-table">Project status</a></li><li><a href="../index.html">Back to overview</a></li></ul></aside>
+    <main id="main-content" tabindex="-1">
+      <p class="eyebrow">COMPONENT DEMO</p>
+      <h1>Accessible data table</h1>
+      <p>The table uses a caption and scoped column headers so its relationships are understandable to screen-reader users.</p>
+      <section id="project-table" aria-labelledby="table-title">
+        <h2 id="table-title">Sample project status</h2>
+        <div class="table-wrap" role="region" aria-label="Project status table" tabindex="0">
+          <table>
+            <caption>Sample tasks and their current status</caption>
+            <thead><tr><th scope="col">Task</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Due date</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Create semantic layout</th><td>Team A</td><td><span class="status status-done">Complete</span></td><td>20 Oct 2026</td></tr>
+              <tr><th scope="row">Build accessible form</th><td>Team A</td><td><span class="status status-progress">In progress</span></td><td>23 Oct 2026</td></tr>
+              <tr><th scope="row">Test keyboard navigation</th><td>Team B</td><td><span class="status status-pending">Pending</span></td><td>25 Oct 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="site-footer"><p>Rabtech Academy · Task 3</p></footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
